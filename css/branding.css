@@ -1,0 +1,224 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #333333;
+    --grey-text: #aaaaaa;
+    --font-family: "futura-pt";
+}
+
+header {
+    height: auto;
+    background-color: transparent;
+    position: fixed;
+    top: 25px; /* Separación de la parte superior */
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Centra el menú horizontalmente */
+}
+
+.nav-pill {
+    background: rgba(30, 30, 30, 0.7); /* Fondo oscuro translúcido */
+    backdrop-filter: blur(15px); /* Efecto de desenfoque de fondo */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px; /* Forma de cápsula */
+    padding: 8px 10px 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--grey-text);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Botón Sign In */
+.btn-signin {
+    color: var(--grey-text);
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+}
+
+.btn-signin:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+/* Botón Join Waitlist (Resaltado blanco con brillo) */
+.btn-waitlist {
+    background: #ffffff;
+    color: #000;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 5px rgba(0, 255, 150, 0.2);
+}
+
+.btn-waitlist:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+body{
+margin:0;
+font-family:"futura-pt", sans-serif;
+color:black;
+}
+
+/* contenedor */
+
+.brand-map{
+background:#000;
+padding:120px 40px;
+color:white;
+position:relative;
+}
+
+.map-title{
+text-align:center;
+font-size:42px;
+margin-bottom:80px;
+}
+
+.map-container{
+position:relative;
+height:600px;
+max-width:1200px;
+margin:auto;
+}
+
+/* NODOS */
+
+.node{
+position:absolute;
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:20px;
+text-align:center;
+
+cursor:pointer;
+
+transition:all .3s;
+}
+
+/* estados */
+
+.completed{
+background:#10a9d6;
+color:black;
+box-shadow:0 0 20px #10a9d6;
+}
+
+.active{
+background:#ffd900;
+color:black;
+box-shadow:0 0 20px #ffd900;
+animation:pulse 2s infinite;
+}
+
+.locked{
+background:#222;
+opacity:0.5;
+}
+
+/* hover */
+
+.node:hover{
+transform:scale(1.1);
+}
+
+/* progreso */
+
+.progress-wrapper{
+max-width:500px;
+margin:80px auto 0;
+text-align:center;
+}
+
+.progress-bar{
+height:8px;
+background:#222;
+border-radius:20px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.progress-fill{
+height:100%;
+width:35%;
+background:#00ff9c;
+}
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 10px #ffd900;
+}
+
+50%{
+box-shadow:0 0 30px #ffd900;
+}
+
+100%{
+box-shadow:0 0 10px #ffd900;
+}
+
+}
+
+.node-info{
+max-width:600px;
+margin:60px auto 0;
+text-align:center;
+color:white;
+}
+
+.node-info h3{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.node-info p{
+opacity:.8;
+line-height:1.5;
+}
+
+.progress-text{
+margin-top:10px;
+font-size:14px;
+opacity:.8;
+}

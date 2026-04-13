@@ -1,0 +1,235 @@
+/* --- Variables Globales --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #333333;
+    --grey-text: #aaaaaa;
+    --font-family: "futura-pt";
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "futura-pt", sans-serif;
+    overflow-x: hidden;
+}
+
+section{
+padding:100px 10%;
+}
+
+header {
+    height: auto;
+    background-color: transparent;
+    position: fixed;
+    top: 25px; /* Separación de la parte superior */
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Centra el menú horizontalmente */
+}
+
+.nav-pill {
+    background: rgba(30, 30, 30, 0.7); /* Fondo oscuro translúcido */
+    backdrop-filter: blur(15px); /* Efecto de desenfoque de fondo */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px; /* Forma de cápsula */
+    padding: 8px 10px 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--grey-text);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Botón Sign In */
+.btn-signin {
+    color: var(--grey-text);
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+}
+
+.btn-signin:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+/* Botón Join Waitlist (Resaltado blanco con brillo) */
+.btn-waitlist {
+    background: #ffffff;
+    color: #000;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 5px rgba(0, 255, 150, 0.2);
+}
+
+.btn-waitlist:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* HERO */
+
+.project-hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:#111;
+}
+
+.project-hero h1{
+font-size:60px;
+margin-bottom:20px;
+color: white;
+}
+
+.project-hero p{
+font-size:20px;
+opacity:0.7;
+color: white;
+}
+
+/* INTRO */
+
+
+
+.first-image img{
+width:100%;
+display:block;
+align-content: center;
+}
+
+
+/* CONTENEDOR */
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+/* IMAGEN GRANDE */
+
+.full-image img{
+width:100%;
+display:block;
+align-content: center;
+}
+
+.wireframe {
+background-color: #212223;
+
+}
+
+
+
+/* TEXTO */
+
+.project-text p{
+margin-top:20px;
+line-height:1.6;
+opacity:0.8;
+}
+
+
+/* GALERIA GRID */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+transition:0.4s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+
+/* SLIDER */
+
+.gallery-slider{
+display:flex;
+justify-content:center;
+
+}
+
+.slider{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.slides{
+width:100%;
+overflow:hidden;
+
+}
+
+.slides img{
+width:100%;
+display:none;
+}
+
+.slides img.active{
+display:block;
+}
+
+button{
+background:none;
+border:1px solid white;
+color:#2d2d2d;
+padding:10px 15px;
+cursor:pointer;
+}
+
+
+/* RESULTADO */
+
+.project-result{
+background-color: #212223;
+text-align:center;
+color: white;
+}
