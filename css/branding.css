@@ -6,6 +6,12 @@
     --font-family: "futura-pt";
 }
 
+a {
+    text-decoration: none; /* Esto es lo que quita el subrayado */
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
 header {
     height: auto;
     background-color: transparent;
