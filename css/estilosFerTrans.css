@@ -234,3 +234,75 @@ cursor:pointer;
 text-align:center;
 color: white;
 }
+
+
+@media (max-width:768px){
+
+    section{
+        padding:60px 20px;
+    }
+
+    .nav-pill{
+        gap:15px;
+        padding:6px 8px 6px 15px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-logo img{
+        height:32px;
+    }
+
+    .btn-signin,
+    .btn-waitlist{
+        font-size:.75rem;
+        padding:8px 16px;
+    }
+
+    .project-hero{
+        height:65vh;
+        min-height:420px;
+    }
+
+    .project-hero h1{
+        font-size:38px;
+    }
+
+    .project-hero p{
+        font-size:16px;
+    }
+
+    .container{
+        max-width:100%;
+    }
+
+    .container h2{
+        font-size:30px;
+        margin-bottom:18px;
+    }
+
+    .container p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .first-image,
+    .full-image,
+    .wireframe{
+        padding:30px 20px;
+    }
+
+    .first-image img,
+    .full-image img,
+    .wireframe img{
+        width:100%;
+        display:block;
+        border-radius:16px;
+    }
+
+    .project-result{
+        padding:70px 20px;
+    }
+}
