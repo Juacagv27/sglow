@@ -283,31 +283,29 @@ header {
  
   /* El wrapper define el espacio — los slides se apilan dentro */
   .sg-track-wrap {
-     position: relative;
-    width: calc(100% - 40px);
+    position: relative;          /* contiene los absolutos */
+    width: calc(100% - 40px);    /* margen 20px por lado */
     max-width: 480px;
+    aspect-ratio: 3 / 4;        /* tarjeta vertical, más larga */
     padding: 0;
     overflow: hidden;
-    border-radius: 22px;
+    border-radius: 22px;         /* esquinas redondeadas */
+    gap: 0;
   }
  
   /* Todos los slides se apilan en la misma posición */
- .sg-slide {
-    display: none;
+  .sg-slide,
+  .sg-slide.active {
+    position: absolute;
+    inset: 0;
     width: 100%;
-}
-
-.sg-slide.active {
-    display: block;
-    position: relative;
-    width: 100%;
-}
-
-.sg-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+    height: 100%;
+    transform: scale(1) !important;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    cursor: default;
+    border-radius: 22px;
+  }
  
   /* Solo el activo es visible */
   .sg-slide.active {
@@ -315,7 +313,11 @@ header {
     z-index: 1;
   }
  
-
+  .sg-slide img {
+    border-radius: 22px;
+    filter: none !important;
+    transform: scale(1) !important;
+  }
  
   /* En móvil el overlay siempre visible (no requiere hover) */
   .sg-overlay {
